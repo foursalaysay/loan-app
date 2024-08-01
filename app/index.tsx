@@ -1,16 +1,21 @@
 import { Link } from "expo-router";
-import { Button, View } from "react-native";
+import { Button, Image, Pressable, View, Text } from "react-native";
 import { StyleSheet } from "react-native";
+
 
 export default function Page(){
     return(
-        <View>
-            <
+        <View style={styles.container}>
+            <Image source={require('../assets/images/loan-app-logo.png')} style={styles.image} />
             <Link href='/login' asChild>
-                    <Button title="Login"/>
+                <Pressable style={styles.button}>
+                    <Text style={styles.buttonText}>Login</Text>
+                </Pressable>
             </Link>
             <Link href='/register' asChild>
-                    <Button title="Register"/>
+             <Pressable style={styles.button}>
+                    <Text style={styles.buttonText}>Register</Text>
+                </Pressable>
             </Link>
         </View>
     )
@@ -32,10 +37,16 @@ const styles = StyleSheet.create({
         height : 200,
         marginVertical : 10
     },
-    button : {
-        width : 50,
-        height : 20, 
-        backgroundColor : "skyblue"
-    }
+    button: {
+        backgroundColor: '#28a745',  // Green background color
+        padding: 10,
+        borderRadius: 5,
+        alignItems: 'center',  // Center the text within the button
+      },
+      buttonText: {
+        color: '#fff',  // White text color
+        fontSize: 18,
+        fontWeight: 'bold',
+      },
 })
 
