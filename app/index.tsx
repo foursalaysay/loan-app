@@ -3,18 +3,22 @@ import { Button, Image, Pressable, View, Text } from "react-native";
 import { StyleSheet } from "react-native";
 
 
+
 export default function Page(){
+
+    const loginRoute = "/login";
+    const registerRoute = "/register";
     return(
         <View style={styles.container}>
             <Image source={require('../assets/images/loan-app-logo.png')} style={styles.image} />
-            <Link href='/login' asChild>
+            <Link asChild href={loginRoute}>
                 <Pressable style={styles.button}>
                     <Text style={styles.buttonText}>Login</Text>
                 </Pressable>
             </Link>
-            <Link href='/register' asChild>
-             <Pressable style={styles.button}>
-                    <Text style={styles.buttonText}>Register</Text>
+            <Link asChild href={registerRoute}>
+                <Pressable style={styles.button}>
+                <Text style={styles.buttonText}>Register</Text>
                 </Pressable>
             </Link>
         </View>
@@ -42,11 +46,11 @@ const styles = StyleSheet.create({
         padding: 10,
         borderRadius: 5,
         alignItems: 'center',  // Center the text within the button
-      },
-      buttonText: {
+    },
+    buttonText: {
         color: '#fff',  // White text color
         fontSize: 18,
         fontWeight: 'bold',
-      },
+    },
 })
 
