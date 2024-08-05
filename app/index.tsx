@@ -8,12 +8,13 @@ const Index = () => {
     const redirectPage = "/dashboard" as Href;
     const loginPage = "/login" as Href;
 
-    const fetchUser = async () => {
-      const user = await getUser();
-    }
-    if(!user){
-        <Redirect href={loginPage}/>
-    }
+    // const fetchUser = async () => {
+    //   const user = await getUser();
+    // }
+    // if(!user){
+    //     <Redirect href={loginPage}/>
+    // }
+
   return (
     <Redirect href={redirectPage} />
   );
