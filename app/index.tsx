@@ -1,14 +1,22 @@
-import { View, Text } from 'react-native'
-import React from 'react'
-import { Href, Redirect } from 'expo-router'
+// app/App.tsx
+import { Href, Redirect } from 'expo-router';
+import React from 'react';
 
-const IndexPage = () => {
 
+
+const Index = () => {
     const redirectPage = "/dashboard" as Href;
+    const loginPage = "/login" as Href;
 
-return (
+    const fetchUser = async () => {
+      const user = await getUser();
+    }
+    if(!user){
+        <Redirect href={loginPage}/>
+    }
+  return (
     <Redirect href={redirectPage} />
-)
-}
+  );
+};
 
-export default IndexPage
+export default Index;

@@ -7,10 +7,9 @@ interface transactionInfo {
   transactionId : String,
   sender : String,
   receiver : String,
-  amount : Double,
-  terms? : Int16Array,
-  balance: Int16Array,
-
+  amount : number,
+  terms? : number,
+  balance: number, 
 }
 
 const transaction = () => {
